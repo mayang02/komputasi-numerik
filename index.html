@@ -71,6 +71,31 @@
     
     
       
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-XXXXXXXX-X", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
     
     
   </head>
@@ -201,6 +226,8 @@
       
         
       
+        
+      
     </ul>
   </div>
 </nav>
@@ -315,6 +342,18 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="tugas2/" title="Newton Raphson" class="md-nav__link">
+      Newton Raphson
+    </a>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -372,8 +411,8 @@
                 
                   <h1>Profil Mahasiswa</h1>
                 
-                <h2 id="selamat-datang-di-web-mayang-sapitri">Selamat Datang Di Web Mayang Sapitri</h2>
-<h3 id="biodata-mahasiswa">Biodata Mahasiswa</h3>
+                <h2 id="selamat-datang-di-web-mayang-sapitri">Selamat Datang Di Web Mayang Sapitri<a class="headerlink" href="#selamat-datang-di-web-mayang-sapitri" title="Permanent link">&para;</a></h2>
+<h3 id="biodata-mahasiswa">Biodata Mahasiswa<a class="headerlink" href="#biodata-mahasiswa" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Nama : Mayang Sapitri</li>
 <li>NIM : 180411100107</li>
