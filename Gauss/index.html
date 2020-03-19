@@ -377,14 +377,13 @@
 <p>Metode ini berangkat dari kenyataan bahwa bila matriks A berbentuk segitiga atas (menggunakan Operasi Baris Elementer) seperti system persamaan berikut ini:</p>
 <p><img alt="gaus1" src="../assets/images/gaus1.jpg" /></p>
 <p>Maka solusinya dapat dihitung dengan teknik penyulingan mundur  (<strong>backward substitution</strong>):</p>
-<p>(\assets\images\gaus2.jpg)</p>
-<p>kondisi <img alt="" src="C:\Users\ASUS\Documents\may\komputasi-numerik\docs\assets\images\gaus3.jpg" /> sangat penting. Sebab bila<img alt="" src="C:\Users\ASUS\Documents\may\komputasi-numerik\docs\assets\images\gaus4.jpg" />  persamaan diatas menjerjakan pembagian dengan nol. Apabila kondisi tersebut tidak dipenuhi, maka SPL tidak mempunyai jawaban</p>
+<p><img alt="gaus2" src="../assets/images/gaus2.jpg" /></p>
+<p>kondisi <img alt="gaus3" src="../assets/images/gaus3.jpg" /> sangat penting. Sebab bila<img alt="gaus4" src="../assets/images/gaus4.jpg" />  persamaan diatas menjerjakan pembagian dengan nol. Apabila kondisi tersebut tidak dipenuhi, maka SPL tidak mempunyai jawaban</p>
 <h1 id="eliminasi-gauss-jordan"><strong>ELIMINASI GAUSS JORDAN</strong><a class="headerlink" href="#eliminasi-gauss-jordan" title="Permanent link">&para;</a></h1>
 <p>Dalam aljabar linear, eliminasi Gauss-Jordan adalah versi dari eliminasi Gauss. Pada metode eliminasi Gauss-Jordan kita membuat nol elemen-elemen di bawah maupun di atas diagonal utama suatu matriks. Hasilnya adalah matriks tereduksi yang berupa matriks diagonal satuan (semua elemen pada diagonal utama bernilai 1, elemen-elemen lainnya nol).</p>
 <p>Dalam bentuk matriks, eliminasi Gauss-Jordan ditulis sebagai berikut :</p>
-<p>(\assets\images\gaus5.jpg)</p>
-<p>(\assets\images\gaus6.png)</p>
-<p>listing program :</p>
+<p><img alt="gaus5" src="../assets/images/gaus5.jpg" /></p>
+<p><img alt="gaus6" src="../assets/images/gaus6.png" /></p>
 <div class="codehilite"><pre><span></span><code>import numpy as np
 
 #Definisi Matrix
@@ -461,7 +460,7 @@ for m in range(n-1,-1,-1):
 <p>Metode Jacobi, adalah metode tak langsung atau metode iteratif yang melakukan perbaharuan nilai x yang diperoleh tiap iterasi (mirip metode substitusi berurutan). Metode ini hampir sama dengan metode Gauss Seidel, namun tidak melibatkan perhitungan implisit.</p>
 <p>Metode ini merupakan suatu teknik penyelesaian SPL berukuran n x n, AX = b, secara iteratif. Proses penyelesaian dimulai dengan suatu hampiran awal terhadap penyelesaian, X0, kemudian membentuk suatu serangkaian vector X1, X2, … yang konvergen ke X.</p>
 <p>Metode ini ditemukan oleh Matematikawan yang berasal dari Jerman,Carl,Gustav,Jacobi. Penemuan ini diperkirakan pada tahun 1800-an</p>
-<p>(\assets\images\gaus7.png)</p>
+<p><img alt="gaus7" src="../assets/images/gaus7.png" /></p>
 <div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
 <span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">array</span><span class="p">,</span> <span class="n">zeros</span><span class="p">,</span> <span class="n">diag</span><span class="p">,</span> <span class="n">diagflat</span><span class="p">,</span> <span class="n">dot</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
